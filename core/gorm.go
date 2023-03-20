@@ -34,7 +34,7 @@ func InitGorm() *gorm.DB {
 		Logger: mysqllogger,
 	})
 	if err != nil {
-		global.Log.Error(fmt.Sprintf("[%s] mysql连接失败", dsn))
+		global.Log.Fatalf(fmt.Sprintf("[%s] mysql连接失败", dsn))
 		panic(err)
 	}
 	sqlDB, _ := db.DB()

@@ -41,7 +41,7 @@ func (t *LogFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 	log := global.Config.Logger
 
 	//自定义格式日期
-	timestamp := entry.Time.Format("2023-03-19 11:11:11")
+	timestamp := entry.Time.Format("2023-03-01 11:11:11")
 	if entry.HasCaller() {
 		//自定义文件路径
 		funcVal := entry.Caller.Function
